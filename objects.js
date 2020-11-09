@@ -1,7 +1,8 @@
+// ======== Create Hamster Factory ====== // 
 class Hamster {
-    constructor(name) { // owner, name, price
+    constructor(hamsterName) { // owner, name, price
         this.owner = '';
-        this.name = name;
+        this.name = hamsterName;
         this.price = 15;
     }
     wheelRun() {
@@ -15,9 +16,10 @@ class Hamster {
     }
 }
 
+// ======== Create Person Factory ======= // 
 class PersonFactory {
-    constructor(name) {
-        this.name = name;
+    constructor(personName) {
+        this.name = personName;
         this.age = 0;
         this.height = 0;
         this.weight = 0;
@@ -30,6 +32,9 @@ class PersonFactory {
     }
     getAge() {
         return this.age;
+    }
+    getWeight() {
+        return this.weight;
     }
     greet() {
         console.log(this.name);
@@ -50,9 +55,18 @@ class PersonFactory {
     }
     // buyHamster(hamster) - push the hamster object onto the hamster array, 
     // increment mood by 10, decrement bankAccount by the value of the hamster (hint: use getPrice())
-    buyHamster() {
-        const newHamster = new Hamster();
+    buyHamster(hamName) {
+        const newHamster = new Hamster(hamName);
+        newHamster.owner = this.name;
+        this.hamsters.push(newHamster);
         this.mood += 10; 
         this.bank -= newHamster.getPrice(); 
     }
 }
+
+const Bob = new PersonFactory("Bob"); 
+console.log(Bob); 
+Bob.buyHamster("Hamtaro");
+console.log(Bob.hamsters);
+
+// ====== Create a Story for Person Class ======== // 
