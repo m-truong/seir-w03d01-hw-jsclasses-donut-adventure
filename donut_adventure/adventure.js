@@ -21,13 +21,37 @@ class Hero {
         console.log('i\'m ready to rumble');
     }
 }
-
+/**
+ * Create instance of Dougie
+ */
 const dougie = new Hero("Dougie");
 console.log(dougie);
 dougie.talkSass();
 
 class Enemy {
-    constructor () {
-
+    constructor (name) {
+        this.name = name;
+        this.health = 100;
+        this.weapons = {
+            pepperoniStars: 5,
+            cheeseGrease: 10
+        }
+        this.catchPhrases = ['i\'m youtube famous', 'i\'m more dangerous than an uncovered sewer'];
+    }
+    talkSmack() {
+        const randomNum = Math.floor(Math.random() * this.catchPhrases.length);
+        console.log(this.catchPhrases[randomNum]);
+    }
+    announceHealth() {
+        console.log(this.health);
+    }
+    fight() {
+        console.log('i\'m gonna flatten you like a slice of pepperoni!');
     }
 }
+/**
+ * Created instance of Pizza Rat
+ */
+const pizzaRat = new Enemy("PizzaRat");
+console.log(pizzaRat);
+pizzaRat.talkSmack();
