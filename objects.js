@@ -39,18 +39,18 @@ class Person {
     greet() {
         console.log(this.name);
     }
-    eat() {
-        this.weight += 1;
-        this.mood += 1;
+    eat(num) {
+        this.weight += num;
+        this.mood += num;
     }
-    exercise() {
-        this.weight -= 1;
+    exercise(num) {
+        this.weight -= num;
     }
-    ageUp() {
-        this.age += 1;
-        this.height += 1;
-        this.weight += 1;
-        this.mood -= 1;
+    ageUp(num) {
+        this.age += num;
+        this.height += num;
+        this.weight += num;
+        this.mood -= num;
         this.bankAccount += 10;
     }
     // buyHamster(hamster) - push the hamster object onto the hamster array, 
@@ -70,7 +70,6 @@ Bob.buyHamster("Hamtaro");
 console.log(Bob.hamsters);
 
 // ====== Create a Story for Person Class ======== // 
-// WRITE LOOP-INSIDE FUCTION! 
 /**
  * 1. Instantiate a new person named Timmy
  */
@@ -80,11 +79,11 @@ console.log(Timmy);
 /**
  * 2. Age Timmy five-years 
  */
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
+Timmy.ageUp(5);
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
 console.log(Timmy);
 
 /**
@@ -92,11 +91,11 @@ console.log(Timmy);
  * As a precocious child, he feels he's "seen it all" already. 
  * Have him eat five times.
  */
-Timmy.eat();
-Timmy.eat();
-Timmy.eat();
-Timmy.eat();
-Timmy.eat();
+Timmy.eat(5);
+// Timmy.eat();
+// Timmy.eat();
+// Timmy.eat();
+// Timmy.eat();
 console.log(Timmy);
 
 /**
@@ -104,25 +103,25 @@ console.log(Timmy);
  * Kindergarten's coming up and he wants to look good. 
  * Have him exercise five times
  */
-Timmy.exercise();
-Timmy.exercise();
-Timmy.exercise();
-Timmy.exercise();
-Timmy.exercise();
+Timmy.exercise(5);
+// Timmy.exercise();
+// Timmy.exercise();
+// Timmy.exercise();
+// Timmy.exercise();
 console.log(Timmy);
 
 /**
  * 5. Age Timmy 9 years
  */
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
+Timmy.ageUp(9);
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
 console.log(Timmy);
 
 /**
@@ -141,33 +140,33 @@ console.log(Timmy.hamsters);
 /**
  * 9. Age Timmy 15 years
  */
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
-Timmy.ageUp();
+Timmy.ageUp(15);
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
+// Timmy.ageUp();
 console.log(Timmy);
 
 /**
  * 10. Have Timmy eat twice
  */
-Timmy.eat(); 
-Timmy.eat();
+Timmy.eat(2); 
+// Timmy.eat();
 console.log(Timmy);
 
 /**
  * 11. Have Timmy exercise twice
  */
-Timmy.exercise();
-Timmy.exercise();
+Timmy.exercise(2);
+// Timmy.exercise();
 console.log(Timmy);
